@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import { ChangeEvent, FC, useState } from "react";
+import { useAlbumContext } from "@/app/contexts/AlbumContext";
+import { ChangeEvent, FC } from "react";
 
 const Input: FC = () => {
-  const [albumTitle, setAlbumTitle] = useState<string>("");
+  const { albumTitle, setAlbumTitle } = useAlbumContext();
 
   const handleAlbumTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setAlbumTitle(e.target.value);
-    console.log(albumTitle);
   };
 
   return (
-    <div className='max-w-sm'>
+    <div className='max-w-md text-center mx-auto'>
       <label
         htmlFor='input-label'
-        className='block text-sm font-semibold mb-2 dark:text-white'
+        className='block text-lg font-semibold mb-2 dark:text-white'
       >
         Titre de l&apos;album
       </label>

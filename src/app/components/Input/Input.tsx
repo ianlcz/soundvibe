@@ -7,6 +7,7 @@ const Input: FC = () => {
   const { albumTitle, setAlbumTitle } = useAlbumContext();
 
   const handleAlbumTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
     setAlbumTitle(e.target.value);
   };
 

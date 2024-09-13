@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { ReactNode } from "react";
 import PrelineScript from "./components/PrelineScript";
+import { AlbumProvider } from "./contexts/AlbumContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -10,10 +12,12 @@ export const metadata: Metadata = {
 const RootLayout = ({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) => (
   <html lang='en'>
-    <body>{children}</body>
+    <body>
+      <AlbumProvider>{children}</AlbumProvider>
+    </body>
     <PrelineScript />
   </html>
 );

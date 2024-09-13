@@ -1,6 +1,7 @@
 interface AlbumType {
-  collectionName: string;
-  artworkUrl100: string;
+  id?: number;
+  title: string;
+  poster: string;
   artistName: string;
   releaseDate: number;
 }

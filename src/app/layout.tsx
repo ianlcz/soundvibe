@@ -5,7 +5,7 @@ import { AlbumProvider } from "./contexts/AlbumContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SoundVibe",
+  collectionName: "SoundVibe",
   description: "Search your music albums",
 };
 

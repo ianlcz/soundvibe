@@ -1,5 +1,5 @@
 interface AlbumContextType {
   albumTitle: string;
-  setAlbumTitle: (title: string) => void;
+  setAlbumTitle: (collectionName: string) => void;
 }
 export default AlbumContextType;

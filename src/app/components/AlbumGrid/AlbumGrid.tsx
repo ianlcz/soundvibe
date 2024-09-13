@@ -10,8 +10,8 @@ const AlbumGrid = ({ albums }: { albums: AlbumType[] }) => {
         ? albums.map((album, idx) => (
             <AlbumCard
               key={idx}
-              collectionName={album.collectionName}
-              artworkUrl100={album.artworkUrl100}
+              title={album.title}
+              poster={album.poster}
               artistName={album.artistName}
               releaseDate={album.releaseDate}
             />

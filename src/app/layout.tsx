@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { ReactNode } from "react";
 import PrelineScript from "./components/PrelineScript";
+import { AlbumProvider } from "./contexts/AlbumContext";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -22,11 +24,11 @@ export const metadata: Metadata = {
 const RootLayout = ({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) => (
   <html lang='en'>
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      {children}
+      <AlbumProvider>{children}</AlbumProvider>
     </body>
     <PrelineScript />
   </html>
